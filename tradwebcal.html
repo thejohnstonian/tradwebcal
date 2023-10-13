@@ -1,51 +1,102 @@
 <!DOCTYPE html>
 <head>
-    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="dark.css" />
+    <script type="text/javascript" src="tradwebcal.js"></script>
+    <meta charset="utf-8" />
     <title>Traditional Catholic Calendar</title>
-
-    <link rel="stylesheet" href="dark.css" media="screen">
 </head>
 
-<body>
-<section id="header"></section>
-<center>
-<div id="dateselect">
-    <button class="dropdown" id="lstyear"></button>
-        <div class="dropdown-content">
-            <p>2024</p>
-            <p>2025</p>
-            <p>2026</p>
-            <p>2027</p>
-            <p>2028</p>
-            <p>2029</p>
-            <p>2030</p>
-            <p>2031</p>
+<body onload="setToday()">
+    <center><section class="boxhead">
+        <h1>Traditional Catholic Calendar</h1>
+        <div id="seldate">
+            <div class ="dropdown" id="ddyear">
+                <button class="btndrop" id="btnyear"></button>
+                    <div class="dropdown-content" id="lstyear">
+                    </div>
+            </div>
+            <div class="dropdown">
+                <button class="btndrop" id="btnmonth"></button>
+                    <div class="dropdown-content" id="lstmonth">
+                        <p class="btnmth" id="btnmth0" onclick="mthsel('January')">January</p>
+                        <p class="btnmth" id="btnmth1" onclick="mthsel('February')">February</p>
+                        <p class="btnmth" id="btnmth2" onclick="mthsel('March')">March</p>
+                        <p class="btnmth" id="btnmth3" onclick="mthsel('April')">April</p>
+                        <p class="btnmth" id="btnmth4" onclick="mthsel('May')">May</p>
+                        <p class="btnmth" id="btnmth5" onclick="mthsel('June')">June</p>
+                        <p class="btnmth" id="btnmth6" onclick="mthsel('July')">July</p>
+                        <p class="btnmth" id="btnmth7" onclick="mthsel('August')">August</p>
+                        <p class="btnmth" id="btnmth8" onclick="mthsel('September')">September</p>
+                        <p class="btnmth" id="btnmth9" onclick="mthsel('October')">October</p>
+                        <p class="btnmth" id="btnmthA" onclick="mthsel('November')">November</p>
+                        <p class="btnmth" id="btnmthB" onclick="mthsel('December')">December</p>
+                    </div>
+            </div>
+            <div id="setToday">
+                <button id="btnToday" onclick="setToday()">Today</button>
+            </div>
         </div>
-    <button id="lstmonth"></button>
-        <div class="dropdown">
-        <p></p>
-        </div>
-<script>
-const date = new Date();
-let rawmonth = date.getMonth();
-let year = date.getFullYear();
+    </section>
 
-const Months = {
-    0: "January";
-    1: "February";
-    2: "March";
-    3: "April";
-    4: "May";
-    5: "June";
-    6: "July";
-    7: "August";
-    8: "September";
-    9: "October";
-    10: "November";
-    11: "December"
-}
-document.getElementById("lstyear").innerHTML = year;
-document.getElementById("lstmonth").innerHTML = rawmonth.Months;
-</script>
-</center>
+
+    <section id="calendar">
+    <div id="calendiv">
+        <table>
+            <tr>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+            <tr>
+                <td id="a0"></td>
+                <td id="a1"></td>
+                <td id="a2"></td>
+                <td id="a3"></td>
+                <td id="a4"></td>
+                <td id="a5"></td>
+                <td id="a6"></td>
+            </tr>
+            <tr>
+                <td id="b0"></td>
+                <td id="b1"></td>
+                <td id="b2"></td>
+                <td id="b3"></td>
+                <td id="b4"></td>
+                <td id="b5"></td>
+                <td id="b6"></td>
+            </tr>
+            <tr>
+                <td id="c0"></td>
+                <td id="c1"></td>
+                <td id="c2"></td>
+                <td id="c3"></td>
+                <td id="c4"></td>
+                <td id="c5"></td>
+                <td id="c6"></td>
+            </tr>
+            <tr>
+                <td id="d0"></td>
+                <td id="d1"></td>
+                <td id="d2"></td>
+                <td id="d3"></td>
+                <td id="d4"></td>
+                <td id="d5"></td>
+                <td id="d6"></td>
+            </tr>
+            <tr>
+                <td id="e0"></td>
+                <td id="e1"></td>
+                <td id="e2"></td>
+                <td id="e3"></td>
+                <td id="e4"></td>
+                <td id="e5"></td>
+                <td id="e6"></td>
+            </tr>
+        </table>
+    </div>
+    </section></center>
 </body>
