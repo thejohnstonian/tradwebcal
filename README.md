@@ -1,2 +1,2 @@
 # tradwebcal
-Webapp implementation of Traditional Catholic Calendar
+Webapp to calculate the Catholic Liturgical Calendar for any year 
