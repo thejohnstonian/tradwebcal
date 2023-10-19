@@ -169,3 +169,4 @@ function feastsByDay(d) {
     TODO Need to figure out how to handle Ember Days
     TODO Convert CSV data into human-readable format within calendar table
     TODO For now, every Friday will have the abstinence flag. Need to figure out how to handle non-Fridays which require abstinence, and Fridays that do not require abstinence.
+*/
